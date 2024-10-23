@@ -130,7 +130,7 @@ export default function Front() {
 
         <div
           className={`md:h-[400px] h-[490px] rounded-xl w-full md:pl-10 md:pr-10 max-w-[500px] flex justify-center bg-white mt-[-140px] md:mt-[-120px] ${
-            isDarkTheme ? "bg-slate-900" : ""
+            isDarkTheme ? "bg-gray-900" : ""
           }`}
         >
           <div className="range-slider w-full p-4">
