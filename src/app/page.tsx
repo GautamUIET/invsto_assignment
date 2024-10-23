@@ -1,6 +1,16 @@
-import Image from "next/image";
+//  "use client"
+ import Image from "next/image";   
+import { redirect } from "next/navigation"; 
+import {Manrope} from "@next/font/google" 
+const manrope = Manrope({
+  weight: ['400', '600', '700'], // Specify desired font weights
+  subsets: ['latin'], // Specify needed subsets
+  variable: '--font-manrope', // Define a CSS variable for the font
+});
 
-export default function Home() {
+export default function Home() {     
+
+  redirect("/front") ; 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
