@@ -61,7 +61,7 @@ export default function Front() {
       let newPrice = parseFloat(prev.price.replace("$", ""));
 
       if (!newIsMonthlyBilling) {
-        newPrice *= 0.75;
+        newPrice = newPrice*12*0.75;
       } else {
         if (prev.value <= 20) {
           newPrice = 8.0;
@@ -129,7 +129,7 @@ export default function Front() {
         </div>
 
         <div
-          className={`md:h-[400px] h-[490px] rounded-xl w-full md:pl-10 md:pr-10 max-w-[500px] flex justify-center bg-white mt-[-140px] md:mt-[-80px] ${
+          className={`md:h-[400px] h-[490px] rounded-xl w-full md:pl-10 md:pr-10 max-w-[500px] flex justify-center bg-white mt-[-140px] md:mt-[-120px] ${
             isDarkTheme ? "bg-slate-900" : ""
           }`}
         >
