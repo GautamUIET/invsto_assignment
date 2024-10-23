@@ -1,12 +1,6 @@
 //  "use client"
  import Image from "next/image";   
 import { redirect } from "next/navigation"; 
-import {Manrope} from "@next/font/google" 
-const manrope = Manrope({
-  weight: ['400', '600', '700'], // Specify desired font weights
-  subsets: ['latin'], // Specify needed subsets
-  variable: '--font-manrope', // Define a CSS variable for the font
-});
 
 export default function Home() {     
 
