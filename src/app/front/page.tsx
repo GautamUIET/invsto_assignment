@@ -84,10 +84,17 @@ export default function Front() {
     });
   };
 
-  const toggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
-  };
+  // const toggleTheme = () => {
+  //   setIsDarkTheme(!isDarkTheme);
+  // }; 
 
+  const toggleTheme = () => {
+    setIsDarkTheme(prev => {
+      console.log("Toggling theme: ", !prev);
+      return !prev;
+    });
+  };
+  
   return (
     <div className={`${manrope.className} ${isDarkTheme ? "dark" : ""}`}>
       <div
@@ -129,9 +136,9 @@ export default function Front() {
         </div>
 
         <div
-          className={`md:h-[400px] h-[490px] rounded-xl w-full md:pl-10 md:pr-10 max-w-[500px] flex justify-center bg-white mt-[-140px] md:mt-[-120px] ${
-            isDarkTheme ? "bg-slate-900" : ""
-          }`}
+          className={ `${
+            isDarkTheme?"bg-slate-900":"bg-white"
+          } md:h-[400px] h-[490px] rounded-xl w-full md:pl-10 md:pr-10 max-w-[500px] flex justify-center  mt-[-140px] md:mt-[-120px] `}
         >
           <div className="range-slider w-full p-4">
             <div className="flex flex-col md:flex-row mt-10 mb-10 justify-between items-center md:items-start">
